@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from jobsearch.models import load_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+load_data()
