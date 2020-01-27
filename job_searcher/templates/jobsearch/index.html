@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Live Jobs</h2>
+	{% for job in jobs %}
+    <hr>
+    <h2>{{job.title}}</h2>
+    <h4>Location: {{job.location}}</h4>
+    <h4>Company: {{job.company}}</h4>
+    <hr>
+  {% endfor %}
+{% endblock %}

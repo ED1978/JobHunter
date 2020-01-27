@@ -14,11 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from jobsearch.models import load_data
+from django.urls import path, include
 
 urlpatterns = [
+    path('jobs/', include('jobsearch.urls')),
     path('admin/', admin.site.urls),
 ]
-
-load_data()
